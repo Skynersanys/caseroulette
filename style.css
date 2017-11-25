@@ -1,0 +1,23 @@
+.itemCarouselClass{
+  margin-bottom: 50px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 50px;
+}
+
+#imageId{
+  margin-left: 100px;
+  width: 800px;
+	height: 600px;
+}
+
+.buttonBoxClass{
+  margin-bottom: 10px;
+  margin-left: 470px;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+.buttonStartClass{
+  margin-left: 750px;
+}
