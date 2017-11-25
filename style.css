@@ -5,9 +5,10 @@
   margin-top: 50px;
 }
 
-#image{
-  max-width:100%;
-  height:auto;
+#imageId{
+  margin-left: 100px;
+  width: 800px;
+	height: 600px;
 }
 
 .buttonBoxClass{
