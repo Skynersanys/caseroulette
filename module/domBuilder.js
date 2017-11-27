@@ -42,28 +42,19 @@ img = document.getElementById("imageId");
 inputChance = document.getElementById("inputId");
 }
 
+function addChanceEvent(index){
+  addChance = parseInt(inputChance.value);
+  masChance[index] += addChance;
+  addChance = 0;
+}
+
 function initListeners(){
   buttonStart.addEventListener("click", random);
-  addChanceCommon.addEventListener("click", function(){
-    addChance = parseInt(inputChance.value);
-    masChance[0] += addChance;
-    addChance = 0});
-  addChanceUncommon.addEventListener("click", function(){
-    addChance += parseInt(inputChance.value);
-    masChance[1] += addChance;
-    addChance = 0;});
-  addChanceRare.addEventListener("click", function () {
-    addChance += parseInt(inputChance.value);
-    masChance[2] += addChance
-    addChance = 0;});
-  addChanceMythical.addEventListener("click", function(){
-    addChance += parseInt(inputChance.value);
-    masChance[3] += addChance
-    addChance = 0;});
-  addChanceLegendary.addEventListener("click", function(){
-    addChance += parseInt(inputChance.value);
-    masChance[4] += addChance
-    addChance = 0;});
+  addChanceCommon.addEventListener("click", function(){addChanceEvent(0)});
+  addChanceUncommon.addEventListener("click", function(){addChanceEvent(1)});
+  addChanceRare.addEventListener("click", function(){addChanceEvent(2)});
+  addChanceMythical.addEventListener("click", function(){addChanceEvent(3)});
+  addChanceLegendary.addEventListener("click", function(){addChanceEvent(4)});
 }
 
 function random(){
@@ -100,8 +91,6 @@ function resultItem(item){
       break;
   }
 }
-
-//buttonStart.addEventListener("click", random);
 
 return {
   init: init
